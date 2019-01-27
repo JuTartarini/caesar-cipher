@@ -2,12 +2,38 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Caesar Cipher</title>
-    <link rel="stylesheet" href="style.css" />
+    <meta name="viewport" content="width=device-width">
+    <title>repl.it</title>
+    <link href="Style.css" rel="stylesheet" type="text/css" />
   </head>
+  <h1> Cifra de César </h1>
   <body>
-    <div id="root"></div>
-    <script src="cipher.js"></script>
-    <script src="index.js"></script>
+
+  <div>
+    <p> Digite a mensagem que você deseja codificar:</p>
+    <textarea rows="4" cols="50" id="txtMessageCodificar">
+    ABC
+    </textarea>
+    <p> Digite o número da posição que deverá iniciar a codificação:</p>
+    <input type="text" id="desloCodificar" name="Number" class="Number"><br>
+    <br> <input type="button" value="Ok" id="codificar" Onclick= "BtnCodificar()">
+    <p id='numMessageCodifica'>  </p>
+    <p id='lblMessageCodifica'>  </p>
+
+  </div>
+
+  <div>
+    <p> Digite a mensagem que você deseja descodificar:</p>
+    <textarea rows="4" cols="50" id="txtMessageDesCodificar">
+    At w3schools.com you will learn how to make a website. We offer free tutorials in all web development technologies.
+    </textarea>
+    <p> Digite o número da posição que deverá iniciar a codificação:</p>
+    <input type="text" id="numberCodificar" name="Number" class="Number"><br>
+    <br> <input type="button" value="Ok" id="descodificar" Onclick= "BtnDesCodificar()">
+    <p id="lblMessageDesCodifica">  </p>
+  </div>
+
+
+    <script type="text/javascript" src="app.js"></script>
   </body>
 </html>
