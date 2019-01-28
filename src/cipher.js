@@ -15,7 +15,7 @@ document.getElementById('numMessageCodifica').innerHTML = offset;
 
 
 
-let tamanhoAlfabet = 91 - 65;
+let tamanhoAlfabet = 90 - 65;
 let msgCodificada;
 
 let res = "";
@@ -28,12 +28,12 @@ let posicaoLetraASCII = msgASerCodificada.charCodeAt(i);
  msgCodificada = ((posicaoLetraASCII - 65 + parseInt(offset)) % 26) + 65
  res += String.fromCharCode(msgCodificada);
 //}
-console.log(offset);
+
 
 }
 
-//document.getElementById("lblMessageCodifica").innerHTML = posicaoLetraASCII;
-console.log(res);
+document.getElementById("lblMessageCodifica").innerHTML = res;
+
 
 }
 
