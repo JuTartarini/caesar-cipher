@@ -37,7 +37,8 @@ function BtnDesCodificar()
       msgDesCodificada = ((posicaoLetraASCII - 65 - parseInt(offset)) % 26) + 65
       res2 += String.fromCharCode(msgDesCodificada);
       console.log(posicaoLetraASCII);
-      
+      console.log(msgDesCodificada);
+
       console.log(res2);
 
   }
