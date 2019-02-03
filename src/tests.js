@@ -1,56 +1,52 @@
-let resultadoCode = Code("ABACATE",7);
+let resultadoCode = CipherCode("ABACATE",7);
 
 if (resultadoCode === "HIHJHAL") {
-    console.log("A função de criptografar funcionou! O resultado " + resultadoCode + " é o esperado.");
+    console.log( "Teste 1  OK!");
 } else {
-    console.log("Tente novamente, a função de criptografar flopou. O resultado " + resultadoCode + " não é o esperado ('HIHJHAL').");
-}
-resultadoCode = Code("JÉSSICA NÃO CURTE ABACATE KKK",7);
-
-if (resultadoCode === "QÉZZPJH UÃV JBYAL HIHJHAL RRR") {
-    console.log("A função de criptografar funcionou! O resultado " + resultadoCode + " é o esperado.");
-} else {
-    console.log("Tente novamente, a função de criptografar flopou. O resultado " + resultadoCode + " não é o esperado ('QÉZZPJH UÃV JBYAL HIHJHAL RRR').");
+    console.log(" Teste 1 ERRRO!");
 }
 
-resultadoCode = Code("aloha galerezzz!!11!!",135000);
-
-if (resultadoCode === "itwpi oitmzmhhh!!11!!") {
-    console.log("A função de criptografar funcionou! O resultado " + resultadoCode + " é o esperado.");
+resultadoCode = CipherCode("VaMos FAzer uma feStA Na PiSiNa",8);
+if (resultadoCode === "DiUwa NIhmz cui nmAbI Vi XqAqVi") {
+  console.log( "Teste 2  OK!");
 } else {
-    console.log("Tente novamente, a função de criptografar flopou. O resultado " + resultadoCode + " não é o esperado ('itwpi oitmzmhhh!!11!!').");
+  console.log(" Teste 2 ERRRO!");
 }
 
-resultadoCode = Code("o coração da zebra não é listrado kkk",2755300);
+resultadoCode = CipherCode("Olá mamãe!!!",1200000);
+if (resultadoCode === "Khá iwiãa!!!") {
+  console.log( "Teste 3  OK!");
+} else {
+  console.log(" Teste 3 ERRRO!");
+}
 
+resultadoCode = CipherCode("o coração da zebra não é listrado kkk",2755300);
 if (resultadoCode === "q eqtcçãq fc bgdtc pãq é nkuvtcfq mmm") {
-    console.log("A função de criptografar funcionou! O resultado " + resultadoCode + " é o esperado.");
+  console.log( "Teste 4  OK!");
 } else {
-    console.log("Tente novamente, a função de criptografar flopou. O resultado " + resultadoCode + " não é o esperado ('q eqtcçãq fc bgdtc pãq é nkuvtcfq mmm').");
+  console.log(" Teste 4 ERRRO!");
 }
 
 
-resultadoCode  = Code("QÉZZPJH UÃV JBYAL HIHJHAL RRR",-7);
-
+resultadoCode  = CipherCode("QÉZZPJH UÃV JBYAL HIHJHAL RRR",-7);
 if (resultadoCode === "JÉSSICA NÃO CURTE ABACATE KKK") {
-    console.log("A função de decifrar funcionou! O resultado " + resultadoCode + " é o esperado.");
+  console.log( "Teste 5  OK!");
 } else {
-    console.log("Tente novamente, a função de decifrar flopou. O resultado " + resultadoCode + " não é o esperado ('JÉSSICA NÃO CURTE ABACATE KKK').");
+  console.log(" Teste 5 ERRRO!");
 }
 
 
-resultadoCode = Code("itwpi oitmzmhhh!!11!!",-135000);
-
+resultadoCode = CipherCode("itwpi oitmzmhhh!!11!!",-135000);
 if (resultadoCode === "aloha galerezzz!!11!!") {
-    console.log("A função de decifrar funcionou! O resultado " + resultadoCode + " é o esperado.");
+  console.log( "Teste 6  OK!");
 } else {
-    console.log("Tente novamente, a função de decifrar flopou. O resultado " + resultadoCode + " não é o esperado ('aloha galerezzz!!11!!').");
+  console.log(" Teste 6 ERRRO!");
 }
 
-resultadoCode = Code( "q eqtcçãq fc bgdtc pãq é nkuvtcfq mmm",-2755300);
+resultadoCode = CipherCode( "q eqtcçãq fc bgdtc pãq é nkuvtcfq mmm",-2755300);
 
 if (resultadoCode === "o coração da zebra não é listrado kkk") {
-    console.log("A função de decifrar funcionou! O resultado " + resultadoCode + " é o esperado.");
-} else {
-    console.log("Tente novamente, a função de decifrar flopou. O resultado " + resultadoCode + " não é o esperado ('o coração da zebra não é listrado kkk').");
-}
+  console.log( "Teste 7  OK!");
+  } else {
+  console.log(" Teste 7 ERRRO!");
+  }
