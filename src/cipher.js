@@ -20,20 +20,19 @@ function functionBtn() {
   msgASerCodificada = document.getElementById('txtMessageCodificar').value.trim();
   document.getElementById('txtMessageCodificar').innerHTML = msgASerCodificada;
   offsetCod = parseInt(document.getElementById('desloCodificar').value);
+   directionOffset();
+  ChoiceCipher();
 }
 
 
 function BtnCodificar() {
   functionBtn()
   let resultadoCodificar = Code(msgASerCodificada, offsetCod);
-  document.getElementById('lblMessage').value = resultadoCodificar;
+  document.getElementById('lblMessage').innerHTML = resultadoCodificar;
+  document.getElementById('mensage').value = resultadoCodificar;
 }
 
-function BtnDesCodificar() {
-  functionBtn()
-  let resultadoDesCodificar = Code(msgASerDesCodificada, offset);
-  document.getElementById('lblMessage').value = resultadoDesCodificar;
-}
+
 
 
 function mod(offset, tamAlfabt) {
@@ -65,19 +64,55 @@ function Code(string, offset) {
     }
 
 
-
   }
-//document.getElementById("txtWhats").innerHTML = result;
+  return result;
   console.log(result);
+  document.getElementById('mensage').innerHTML = result;
+}
+
+
+function myFunction() {
+  var checkBox = document.getElementById("esquerda");
+  var text = document.getElementById("text");
+  if (checkBox.checked == true){
+    text.style.display = "block";
+  } else {
+     text.style.display = "none";
+  }
+
+}
+
+function directionOffset() {
+  let negativo = document.getElementById('esquerda').checked;
+
+
+  if (negativo === false)
+  {
+    offsetCod = offsetCod * -1
+  }
+console.log(negativo);
+console.log(offsetCod);
+
+}
+
+function ChoiceCipher() {
+  let positivo =document.getElementById('Cripito').checked;
+    let negativo = document.getElementById('esquerda').checked;
+if (positivo === false)
+{
+  offsetCod = offsetCod *-1
+}
+
 }
 
 
 
 
+ //offsetNegativo();
 
+/* Meme */
 
-
-/*var memes = [
+var memes = [
 	'Dude, you smashed my turtle saying "I\'M MARIO BROS!"',
 	'Dude, you grabed seven oranges and yelled "I GOT THE DRAGON BALLS!"',
 	'Dude, you threw my hamster across the room and said "PIKACHU I CHOOSE YOU!"',
@@ -92,22 +127,10 @@ random.innerHTML = memes[Math.floor(Math.random() * memes.length)];
 
 /* Time */
 
-/*var deviceTime = document.querySelector('.status-bar .time');
-var messageTime = document.querySelectorAll('.message .time');
-
-deviceTime.innerHTML = moment().format('h:mm');
-
-setInterval(function() {
-	deviceTime.innerHTML = moment().format('h:mm');
-}, 1000);
-
-for (var i = 0; i < messageTime.length; i++) {
-	messageTime[i].innerHTML = moment().format('h:mm A');
-}
 
 /* Message */
 
-/*var form = document.querySelector('.conversation-compose');
+var form = document.querySelector('.conversation-compose');
 var conversation = document.querySelector('.conversation-container');
 
 form.addEventListener('submit', newMessage);
@@ -150,4 +173,3 @@ function animateMessage(message) {
 		tick.classList.remove('tick-animation');
 	}, 500);
 }
-*/
