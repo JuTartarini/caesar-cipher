@@ -4,20 +4,20 @@ var tamAlfabt = 26;
 var array = [];
 
 
-function GetAlphabet(posicaoInicial, posicaoFinal) {
+function GetAlphabetAscii(posicaoInicial, posicaoFinal) {
   for (i = posicaoInicial; i < posicaoFinal; i++) {
     array.push(String.fromCharCode(i));
   }
 }
 
-GetAlphabet(65, 91);
-GetAlphabet(97, 123);
+GetAlphabetAscii(65, 91);
+GetAlphabetAscii(97, 123);
 
 var msgASerCodificada = "";
 var offsetCod = 0;
 
 
-function dadosCipher() {
+function GetElements() {
   msgASerCodificada = document.getElementById('txtMessageCodificar').value.trim();
   document.getElementById('txtMessageCodificar').innerHTML = msgASerCodificada;
   offsetCod = parseInt(document.getElementById('desloCodificar').value);
@@ -26,18 +26,11 @@ function dadosCipher() {
 }
 
 
-function BtnConfirmar() {
-  dadosCipher()
+function GetConfirm() {
+  GetElements()
   let resultadoCodificar = CipherCode(msgASerCodificada, offsetCod);
   document.getElementById('lblMessage').innerHTML = resultadoCodificar;
   document.getElementById('mensage').value = resultadoCodificar;
-
-  if (msgASerCodificada == "")
-  {
-    document.getElementById('demonstracao').innerHTML ="<label for ='letrasDemonstracao'>" +""+"</label>"
-  }else {
-    document.getElementById('demonstracao').innerHTML = "<label for ='letrasDemonstracao'>" + msgASerCodificada[0] + " = " +resultadoCodificar[0] + "</label>"
-  }
 }
 
 
@@ -71,16 +64,6 @@ function CipherCode(string, offset) {
   document.getElementById('mensage').innerHTML = result;
 }
 
-
-function checkCipher() {
-  var checkBox = document.getElementById("directionOffsetCheck");
-  var text = document.getElementById("text");
-  if (checkBox.checked == true) {
-    text.style.display = "block";
-  } else {
-    text.style.display = "none";
-  }
-}
 
 
 function directionOffset() {

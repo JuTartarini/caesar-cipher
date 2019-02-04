@@ -120,7 +120,7 @@
       </div>
       <div class="borda">
         <br><br>
-        <p> Informe a chave da Cifra:</p>
+        <p> Informe a chave e o sentido de deslocamento da Cifra:</p>
         <input type="text" id="desloCodificar" name="Number" class="textNumber" value="1" onkeypress='return event.charCode >= 48 && event.charCode <= 57' >
         <label class="directionAlphabet">
           Esquerda
@@ -134,9 +134,7 @@
         </label>
         <label id="text" style="display:none"> </label>
 
-        <label class="directionAlphabet; textMarcacao" id="demonstracao" for ="letrasDemonstracao" >
 
-        </label>
 
       </div>
       <br>
@@ -157,7 +155,7 @@
       </div>
       <br>
 
-      <button class="confirmButton" value="Click me" onclick="BtnConfirmar()"> CONFIRMAR </button>
+      <button class="confirmButton" value="Click me" onclick="GetConfirm()"> CONFIRMAR </button>
       <br><br>
 
       <p id='lblMessage' class="textMarcacao"> </p>
